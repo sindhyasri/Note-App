@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(210, 124, 158);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Make sure the margin and padding adapt well */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+#addNoteBtn {
+    display: block;
+    margin: 20px auto;
+    background-color: #2ee935;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+/* Hover effect */
+#addNoteBtn:hover {
+    background-color: #2485b6;
+}
+
+/* Individual note style */
+.note {
+    background-color: #7aef73;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Make sure the textarea inside the note is responsive */
+.note textarea {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    font-size: 16px;
+    min-height: 50px;
+    box-sizing: border-box;
+}
+
+/* Delete button positioning and styling */
+.delete {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.delete:hover {
+    background-color: darkred;
+}
+
+/* Responsive changes for smaller screens */
+@media (max-width: 768px) {
+    #addNoteBtn {
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    .note {
+        padding: 15px;
+    }
+
+    .note textarea {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #addNoteBtn {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .note {
+        padding: 10px;
+    }
+
+    .note textarea {
+        font-size: 12px;
+    }
+}
